@@ -146,4 +146,5 @@ Feedstock Maintainers
 =====================
 
 * [@lucidrains](https://github.com/lucidrains/)
+* [@weiji14](https://github.com/weiji14/)
 
