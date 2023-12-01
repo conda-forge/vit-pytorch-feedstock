@@ -1,5 +1,5 @@
 {% set name = "vit-pytorch" %}
-{% set version = "0.25.5" %}
+{% set version = "1.6.4" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: a41bebbcada080d56a19dd0ffd69c9efd4379aabc7af19e7d71f9c30e6cdead3
+  sha256: 640423cf0026fdd32ea772c62708161a62828aa36f5860996da5dd5cba031a2c
 
 build:
   number: 0
@@ -21,8 +21,8 @@ requirements:
     - pytest-runner
   run:
     - python >=3.6
-    - einops >=0.3
-    - pytorch >=1.6
+    - einops >=0.7.0
+    - pytorch >=1.10
     - torchvision
 
 test:
@@ -46,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - lucidrains
+    - weiji14
