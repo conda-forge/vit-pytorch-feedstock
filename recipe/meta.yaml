@@ -1,5 +1,5 @@
 {% set name = "vit-pytorch" %}
-{% set version = "1.6.8" %}
+{% set version = "1.6.9" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz"
-  sha256: 4c7ed0609d08818f993864e30ac342eb288b2cbe42bf6686d46eb0ab5f552483
+  sha256: b3f7169f9b7f86232018dd23d59ba61c873ba417cf1cf5f39985416d9a307bb4
 
 build:
   number: 0
@@ -45,5 +45,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - lucidrains
     - weiji14
