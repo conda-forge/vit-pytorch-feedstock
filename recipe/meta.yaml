@@ -1,5 +1,6 @@
 {% set name = "vit-pytorch" %}
-{% set version = "1.8.7" %}
+{% set version = "1.8.8" %}
+{% set python_min = "3.8" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +8,7 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz"
-  sha256: 84f3798622b6891ca80f2e8e87949a24e339e1c3a4c67bb242e3f24af7288f2b
+  sha256: 04b14868daf6bf805ac72727c7ef674516c5f1ffcc9c2588fa6c2cc4cf44ab85
 
 build:
   number: 0
@@ -18,11 +19,11 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
   run:
     - einops >=0.7.0
-    - python >=3.6
+    - python >={{ python_min }}
     - pytorch >=1.10
     - torchvision
 
@@ -33,6 +34,7 @@ test:
     - tests/test.py
   requires:
     - pytest
+    - python {{ python_min }}
   commands:
     - pytest tests/*.py
 
