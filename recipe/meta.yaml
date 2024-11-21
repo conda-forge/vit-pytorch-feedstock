@@ -1,5 +1,6 @@
 {% set name = "vit-pytorch" %}
 {% set version = "1.8.8" %}
+{% set python_min = "3.6" %}
 
 package:
   name: "{{ name|lower }}"
@@ -18,11 +19,11 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
   run:
     - einops >=0.7.0
-    - python >=3.6
+    - python >={{ python_min }}
     - pytorch >=1.10
     - torchvision
 
@@ -33,6 +34,7 @@ test:
     - tests/test.py
   requires:
     - pytest
+    - python {{ python_min }}
   commands:
     - pytest tests/*.py
 
