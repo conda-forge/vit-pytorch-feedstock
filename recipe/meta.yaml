@@ -1,5 +1,5 @@
 {% set name = "vit-pytorch" %}
-{% set version = "1.11.5" %}
+{% set version = "1.11.6" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz"
-  sha256: b95586abd0dce2068bb604a334bd1216a3b3ac10f72533c5e37e45defc1b5ed9
+  sha256: f3976beb879d59e955a30c5d0acaf637b474bec41cb0c9eb3430824e2e762f23
 
 build:
   number: 0
