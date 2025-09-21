@@ -9,8 +9,6 @@ Package license: MIT
 
 Summary: Vision Transformer (ViT) - Pytorch
 
-Development: https://github.com/lucidrains/vit-pytorch
-
 Current build status
 ====================
 
