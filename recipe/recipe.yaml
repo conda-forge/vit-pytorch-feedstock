@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: vit-pytorch
-  version: "1.12.4"
+  version: "1.12.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 8b263dd6a458921a915be5e06a3d3daa274d09e7be8bc39641b90a99a66cf4fa
+  sha256: 30bc16af21adfb794e28e1b32d7d10693bd4751c0a8c9371d8df5ab3583e4fcf
 
 build:
   number: 0
@@ -36,13 +36,13 @@ tests:
       python_version: ${{ python_min }}.*
   - files:
       source:
-        - tests/test.py
+        - tests/test_vit.py
     requirements:
       run:
         - pytest
         - python ${{ python_min }}.*
     script:
-      - pytest tests/*.py
+      - pytest --verbose tests/*.py
 
 about:
   homepage: https://github.com/lucidrains/vit-pytorch
