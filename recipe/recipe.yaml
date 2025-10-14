@@ -36,13 +36,13 @@ tests:
       python_version: ${{ python_min }}.*
   - files:
       source:
-        - tests/test.py
+        - tests/test_vit.py
     requirements:
       run:
         - pytest
         - python ${{ python_min }}.*
     script:
-      - pytest tests/*.py
+      - pytest --verbose tests/*.py
 
 about:
   homepage: https://github.com/lucidrains/vit-pytorch
