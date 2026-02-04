@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: vit-pytorch
-  version: "1.17.6"
+  version: "1.17.7"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 6275f0729f451dce83bf123c7068cc3b07fe67d5f8854200e695182d7f61c293
+  sha256: f9ca3ae1a1d79ce3f6eccb2ec5cc5ed0b5d5fa2ea728e6f6e908bf0631dddf33
 
 build:
   number: 0
