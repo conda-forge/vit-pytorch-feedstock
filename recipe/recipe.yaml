@@ -23,9 +23,9 @@ requirements:
     - python ${{ python_min }}.*
     - setuptools >=61
   run:
-    - einops >=0.7.0
+    - einops >=0.8.2
     - python >=${{ python_min }}
-    - pytorch >=1.10
+    - pytorch >=2.4
     - torchvision
 
 tests:
@@ -45,7 +45,7 @@ tests:
       - pytest --verbose tests/*.py
 
 about:
-  homepage: https://github.com/lucidrains/vit-pytorch
+  homepage: https://codeberg.org/lucidrains/vit-pytorch
   license: MIT
   license_file: LICENSE
   summary: Vision Transformer (ViT) - Pytorch
