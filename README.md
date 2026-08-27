@@ -40,31 +40,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `vit-pytorch` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install vit-pytorch
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install vit-pytorch
 ```
 
-It is possible to list all of the versions of `vit-pytorch` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add vit-pytorch
+# for installing globally
+pixi global install vit-pytorch
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `vit-pytorch` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search vit-pytorch --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search vit-pytorch --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search vit-pytorch --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +118,8 @@ mamba repoquery whoneeds vit-pytorch --channel conda-forge
 # List dependencies of `vit-pytorch`:
 mamba repoquery depends vit-pytorch --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
