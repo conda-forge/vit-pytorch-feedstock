@@ -25,7 +25,7 @@ requirements:
   run:
     - einops >=0.8.2
     - python >=${{ python_min }}
-    - pytorch >=2.4
+    - pytorch >=2.5
     - torchvision
 
 tests:
